@@ -2,10 +2,11 @@
 class shape:
 
     def __init__(self):
+        print("No of sides")
 
-        def __sides__(self,NoOfSides):
-            self.NoOfSides = NoOfSides
-            print("Number of sides =", NoOfSides)
+    def __sides__(self,NoOfSides):
+        self.NoOfSides = NoOfSides
+        print("Number of sides =", NoOfSides)
 
 
 
@@ -18,6 +19,7 @@ class triangle(shape):
 
 
     def area(self):
+        super().__sides__(3)
         areaOfTraingle = 0.5* self.base * self.height
         print("Area of Triangle is:", areaOfTraingle)
 
@@ -30,6 +32,7 @@ class rectangle(shape):
         self.breadth = breadth
 
     def area(self):
+        super().__sides__(4)
         areaOfRectangle = self.length * self.breadth
         print("Area of rectangle is:",areaOfRectangle)
 
@@ -42,6 +45,7 @@ class square(rectangle):
         
 
     def area(self):
+        super().__sides__(4)
         areaOfSquare = self.length * self.length
         print("Area of square is:",areaOfSquare)
 
@@ -54,14 +58,12 @@ class square(rectangle):
        
 
         def area(self):
-            areaOfCircle = π * self.radius * self.radius
+            areaOfCircle = 3.14 * self.radius * self.radius
             print("Area of circle is:",areaOfCircle)
 
 
-#Define Area and perimeter of circle.
-    def area(self):
-        def __init__ (self,radius):
-            self.radius = radius
-        perimeterOfCircle = 2 * π * self.radius
-        print("perimeter of circle is:", perimeterOfCircle )
-
+                #Define Area and perimeter of circle.
+        def perimeter(self):
+            perimeterOfCircle = 2 * 3.14 * self.radius
+            print("perimeter of circle is:", perimeterOfCircle )
+            
